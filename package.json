@@ -1,0 +1,37 @@
+{
+  "name": "screeps",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "pull": "node scripts/pull.js",
+    "push": "grunt screeps",
+    "lint": "eslint src",
+    "lint:fix": "eslint src --fix",
+    "typecheck": "tsc --project jsconfig.json"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/f1r3nz4r/screeps.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/f1r3nz4r/screeps/issues"
+  },
+  "homepage": "https://github.com/f1r3nz4r/screeps#readme",
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@types/node": "^26.6.6",
+    "@types/screeps": "^3.4.0",
+    "dotenv": "^18.0.10",
+    "eslint": "^10.15.0",
+    "globals": "^17.14.0",
+    "grunt": "^1.6.3",
+    "grunt-cli": "^1.5.0",
+    "grunt-screeps": "^1.5.0",
+    "typescript": "^7.0.2"
+  }
+}
