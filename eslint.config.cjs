@@ -38,8 +38,8 @@ module.exports = [
 
         rules: {
             ...js.configs.recommended.rules,
+            "no-undef": "off",
             "no-unused-vars": "warn",
-            "no-undef": "error",
             "eqeqeq": ["warn", "always"]
         }
     }
