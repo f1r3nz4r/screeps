@@ -1,26 +1,28 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
-    "checkJs": true,
-    "allowJs": true,
-    "noEmit": true,
-    "types": [
-      "screeps"
-    ],
-    "strict": false,
+    "module": "preserve",
+    "moduleResolution": "bundler",
     "paths": {
-      "*": [
-        "./src/*"
+      "role.*": [
+        "./src/role/*"
+      ],
+      "utils.*": [
+        "./src/utils/*"
+      ],
+      "manager.*": [
+        "./src/manager/*"
       ]
-    }
+    },
+    "checkJs": true,
+    "noEmit": true
   },
   "include": [
     "src/**/*.js",
     "src/**/*.d.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "dist"
   ]
 }

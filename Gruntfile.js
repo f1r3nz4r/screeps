@@ -13,6 +13,25 @@ module.exports = function (grunt) {
     }
 
     grunt.initConfig({
+
+        copy: {
+            screeps: {
+                files: [{
+                    expand: true,
+                    cwd: 'src/',
+                    src: ['**/*.js'],
+                    dest: 'dist/',
+                    rename: function(dest, src) {
+                        return dest + src.replace(/[\\/]/g, '.');
+                    }
+                }]
+            }
+        },
+
+        clean: {
+            dist: ['dist/']
+        },
+
         screeps: {
             options: {
                 email: email,
@@ -26,5 +45,12 @@ module.exports = function (grunt) {
     });
 
     grunt.loadNpmTasks('grunt-screeps');
-    grunt.registerTask('default', ['screeps']);
+    grunt.loadNpmTasks('grunt-contrib-copy');
+    grunt.loadNpmTasks('grunt-contrib-clean');
+
+    grunt.registerTask('default', [
+        'clean:dist',
+        'copy:screeps',
+        'screeps'
+    ]);
 };
